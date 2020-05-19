@@ -6,6 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { SchedulePage } from './schedule';
 import { ScheduleFilterPage } from '../schedule-filter/schedule-filter';
 import { SchedulePageRoutingModule } from './schedule-routing.module';
+import { SuecaComponent } from '../games/sueca/sueca.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { SchedulePageRoutingModule } from './schedule-routing.module';
   ],
   declarations: [
     SchedulePage,
-    ScheduleFilterPage
+    ScheduleFilterPage,
+    SuecaComponent
   ],
   entryComponents: [
     ScheduleFilterPage

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs-page';
-import { SchedulePage } from '../schedule/schedule';
+import { SchedulePage } from '../schedule_GAMES/schedule';
 
 
 const routes: Routes = [
@@ -36,15 +36,6 @@ const routes: Routes = [
           {
             path: 'speaker-details/:speakerId',
             loadChildren: () => import('../speaker-detail/speaker-detail.module').then(m => m.SpeakerDetailModule)
-          }
-        ]
-      },
-      {
-        path: 'map',
-        children: [
-          {
-            path: '',
-            loadChildren: () => import('../map/map.module').then(m => m.MapModule)
           }
         ]
       },

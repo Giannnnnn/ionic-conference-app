@@ -1,0 +1,42 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-buttons *ngIf="!showSearchbar" slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="!ios && !showSearchbar">Games</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Jogo Alcoólico</ion-card-subtitle>
+      <ion-card-title>Sueca</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Sueca é um jogo de cartas que contém suas próprias regras, dependendo da sua sorte na escolha da carta, você pode ficar muito louco ou deixar o amiguinho nesse estado.
+    </ion-card-content>
+    <ion-item href="#" [routerLink]="['sueca']">
+      <ion-icon name="wine" slot="start" ></ion-icon>
+      <ion-label > Jogar </ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" #fab>
+    <ion-fab-button>
+      <ion-icon name="share-social"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="instagram" (click)="openSocial('Instagram', fab)">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="twitter" (click)="openSocial('Twitter', fab)">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="facebook" (click)="openSocial('Facebook', fab)">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

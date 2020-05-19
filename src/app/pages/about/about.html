@@ -21,10 +21,10 @@
   </div>
 
   <div class="about-info">
-    <h3 class="ion-padding-top ion-padding-start">About</h3>
+    <h3 class="ion-padding-top ion-padding-start">Drink Together Game</h3>
 
     <p class="ion-padding-start ion-padding-end">
-      The Ionic Conference is a one-day conference on {{ conferenceDate | date: 'mediumDate' }} featuring talks from the Ionic team. It is focused on Ionic applications being built with Ionic Framework. This includes migrating apps to the latest version of the framework, Angular concepts, Webpack, Sass, and many other technologies used in Ionic 2. Tickets are completely sold out, and we’re expecting more than 1000 developers – making this the largest Ionic conference ever!
+     A aplicação está sendo construida com o intuito de fazer todo mundo ficar loco e fazer merda. Claro que a abordagem se aplica a qualquer tipo de merda, mas principalmente encher o cu de alcool e beijar na boca.
     </p>
 
     <h3 class="ion-padding-top ion-padding-start">Details</h3>
@@ -35,15 +35,18 @@
           Location
         </ion-label>
         <ion-select [(ngModel)]="location" [interfaceOptions]="selectOptions">
-          <ion-select-option value="madison">Madison, WI</ion-select-option>
-          <ion-select-option value="austin">Austin, TX</ion-select-option>
-          <ion-select-option value="chicago">Chicago, IL</ion-select-option>
-          <ion-select-option value="seattle">Seattle, WA</ion-select-option>
+          <ion-select-option value="madison">Casa do jeff, São Roque?</ion-select-option>
+          <ion-select-option value="austin">Casa da Lucia, São Luiz</ion-select-option>
+          <ion-select-option value="chicago">pico em aberto, --</ion-select-option>
+          <ion-select-option value="seattle">Clube Santa Rita, SR</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-item>
         <ion-label>
           Date
+        </ion-label>
+        <ion-label>
+          After Quarentene 
         </ion-label>
         <ion-datetime
           displayFormat="MMM DD, YYYY"
@@ -53,7 +56,7 @@
       </ion-item>
     </ion-list>
 
-    <h3 class="ion-padding-top ion-padding-start">Internet</h3>
+    <!-- <h3 class="ion-padding-top ion-padding-start">Internet</h3>
 
     <ion-list lines="none">
       <ion-item>
@@ -72,6 +75,6 @@
           makegoodthings
         </ion-label>
       </ion-item>
-    </ion-list>
+    </ion-list> -->
   </div>
 </ion-content>
