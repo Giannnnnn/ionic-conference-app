@@ -51,7 +51,7 @@ export class SchedulePage implements OnInit {
     fab.close();
   }
 
-  async play(event){
-    this.router.navigate
+  async play(){
+    this.router.navigateByUrl('/sueca');
   }
 }

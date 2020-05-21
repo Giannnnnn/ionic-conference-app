@@ -8,18 +8,20 @@
 </ion-header>
 
 <ion-content fullscreen="true">
+
+  <router-outlet></router-outlet>
+
   <ion-card>
     <ion-card-header>
       <ion-card-subtitle>Jogo Alcoólico</ion-card-subtitle>
       <ion-card-title>Sueca</ion-card-title>
     </ion-card-header>
-  
     <ion-card-content>
       Sueca é um jogo de cartas que contém suas próprias regras, dependendo da sua sorte na escolha da carta, você pode ficar muito louco ou deixar o amiguinho nesse estado.
     </ion-card-content>
-    <ion-item href="#" [routerLink]="['sueca']">
-      <ion-icon name="wine" slot="start" ></ion-icon>
-      <ion-label > Jogar </ion-label>
+    <ion-item href="#" >
+      <ion-icon name="wine" slot="start"></ion-icon>
+      <ion-label [routerLink]="['/sueca']"> Jogar </ion-label>
     </ion-item>
   </ion-card>
 

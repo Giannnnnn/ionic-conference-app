@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs-page';
 import { SchedulePage } from '../schedule_GAMES/schedule';
-
+import { SuecaPage } from '../games/sueca/sueca.page'
 
 const routes: Routes = [
   {
@@ -23,20 +23,13 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'speakers',
+        path: '',
         children: [
           {
-            path: '',
-            loadChildren: () => import('../speaker-list/speaker-list.module').then(m => m.SpeakerListModule)
+            path: 'sueca',
+            loadChildren: () => import('../games/sueca/sueca.module').then(m => m.SuecaPageModule)
           },
-          {
-            path: 'session/:sessionId',
-            loadChildren: () => import('../session-detail/session-detail.module').then(m => m.SessionDetailModule)
-          },
-          {
-            path: 'speaker-details/:speakerId',
-            loadChildren: () => import('../speaker-detail/speaker-detail.module').then(m => m.SpeakerDetailModule)
-          }
+          
         ]
       },
       {

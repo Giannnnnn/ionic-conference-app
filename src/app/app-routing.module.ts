@@ -23,7 +23,11 @@ const routes: Routes = [
   {
     path: 'app',
     loadChildren: () => import('./pages/tabs-page/tabs-page.module').then(m => m.TabsModule)
+  },  {
+    path: 'sueca',
+    loadChildren: () => import('./pages/games/sueca/sueca.module').then( m => m.SuecaPageModule)
   }
+
 ];
 
 @NgModule({
