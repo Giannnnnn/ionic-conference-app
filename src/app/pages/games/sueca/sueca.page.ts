@@ -19,5 +19,14 @@ public CreatePlayers():void {
 }
 }
 
+public ChooseCard():number{
+  let number =
+  Math.floor((Math.random() * 52) + 1);
+  console.log(number);
+ return number;
+}
+
+
+
 }
 

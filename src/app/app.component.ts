@@ -21,17 +21,17 @@ export class AppComponent implements OnInit {
   appPages = [
     {
       title: 'Games',
-      url: '/app/tabs/schedule',
+      url: '/schedule',
       icon: 'game-controller'
     },
     {
       title: 'Premium',
-      url: '/app/tabs/speakers',
+      url: '/speakers',
       icon: 'star'
     },
     {
       title: 'About',
-      url: '/app/tabs/about',
+      url: '/about',
       icon: 'information-circle'
     }
   ];

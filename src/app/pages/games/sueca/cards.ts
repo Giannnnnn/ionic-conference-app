@@ -68,4 +68,23 @@ export class Cards {
     public static XXXXXI: { value: number, img: string, type: cardsType } = { value: 51, img: "src/assets/cards/QH.png", type: cardsType.M };
     public static XXXXXII: { value: number, img: string, type: cardsType } = { value: 52, img: "src/assets/cards/QS.png", type: cardsType.M };
 
+
+    public static types: Array<{ value: number, img: string, type: cardsType  }> = [
+        Cards.I, Cards.II, Cards.III, Cards.IV, Cards.V, Cards.VI, Cards.VII, Cards.VIII, Cards.IX, Cards.X,
+        Cards.XI, Cards.XII, Cards.XIII, Cards.XIV, Cards.XV, Cards.XVI, Cards.XVII, Cards.XVIII, Cards.XIX, Cards.XX,
+        Cards.XXI, Cards.XXII, Cards.XXIII, Cards.XXIV, Cards.XXV, Cards.XXVI, Cards.XXVII, Cards.XXVIII, Cards.XXIX, Cards.XXX,
+        Cards.XXXI, Cards.XXXII, Cards.XXXIII, Cards.XXXIV, Cards.XXXV, Cards.XXXVI, Cards.XXXVII, Cards.XXXVIII, Cards.XXXIX, Cards.XXXX,
+        Cards.XXXXI, Cards.XXXXII, Cards.XXXXIII, Cards.XXXXIV, Cards.XXXXV, Cards.XXXXVI, Cards.XXXXVII, Cards.XXXXVIII, Cards.XXXIX, Cards.XXXXX
+    ];
+
+    public static getStatusColorByValue(cardNumber: number): Type {
+        for (const value of Cards.types) {
+            if (cardNumber == value.value) {
+                return ;
+            }
+        }
+        return undefined;
+    }
+
+
 }

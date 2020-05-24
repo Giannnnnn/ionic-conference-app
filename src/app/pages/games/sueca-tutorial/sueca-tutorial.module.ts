@@ -1,22 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
 
-import { SchedulePage } from './schedule';
-import { SchedulePageRoutingModule } from './schedule-routing.module';
+import { SuecaTutorialPageRoutingModule } from './sueca-tutorial-routing.module';
+
+import { SuecaTutorialPage } from './sueca-tutorial.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SchedulePageRoutingModule
+    SuecaTutorialPageRoutingModule
   ],
-  declarations: [
-    SchedulePage,
-  ],
-  entryComponents: [
-  ]
+  declarations: [SuecaTutorialPage]
 })
-export class ScheduleModule { }
+export class SuecaTutorialPageModule {}

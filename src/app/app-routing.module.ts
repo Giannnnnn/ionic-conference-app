@@ -23,9 +23,26 @@ const routes: Routes = [
   {
     path: 'app',
     loadChildren: () => import('./pages/tabs-page/tabs-page.module').then(m => m.TabsModule)
-  },  {
+  },
+  {
     path: 'sueca',
     loadChildren: () => import('./pages/games/sueca/sueca.module').then( m => m.SuecaPageModule)
+  },
+  {
+    path: 'sueca-tutorial',
+    loadChildren: () => import('./pages/games/sueca-tutorial/sueca-tutorial.module').then( m => m.SuecaTutorialPageModule)
+  },
+  {
+    path: 'schedule',
+    loadChildren: () => import('./pages/schedule_GAMES/schedule.module').then( m => m.ScheduleModule)
+  },
+  {
+    path: 'premium',
+    loadChildren: () => import('./pages/schedule_GAMES/schedule.module').then( m => m.ScheduleModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./pages/about/about.module').then( m => m.AboutModule)
   }
 
 ];
