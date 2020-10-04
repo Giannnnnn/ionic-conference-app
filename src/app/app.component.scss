@@ -85,3 +85,8 @@ ion-menu.ios ion-item ion-icon {
 ion-menu.ios ion-item.selected ion-icon {
   color: var(--ion-color-primary);
 }
+ion-loading {
+  --background: #222;
+  --spinner-color: #fff;
+  color: #fff;
+}
