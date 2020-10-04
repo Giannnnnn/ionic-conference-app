@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=S57QWQGZf3I&t=165s
+https://www.youtube.com/watch?v=guM__mfT9og
+https://www.fabricadecodigo.com/adicionando-autenticacao-do-google-ao-seu-web-app/
+https://www.udemy.com/course/ionic-angular-firebase-facebook/learn/lecture/14409548#overview
+https://edupala.com/ionic-two-way-data-binding/
+https://ionicframework.com/docs/api/loading
