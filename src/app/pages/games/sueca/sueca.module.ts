@@ -13,7 +13,7 @@ import { SuecaPage } from './sueca.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    SuecaPageRoutingModule
+    SuecaPageRoutingModule,
   ],
   declarations: [SuecaPage]
 })

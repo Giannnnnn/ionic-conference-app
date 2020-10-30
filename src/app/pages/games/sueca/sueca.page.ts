@@ -1,4 +1,5 @@
-import { Component, Input, OnInit,NgModule } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
+import { Component} from '@angular/core';
 import { Player } from './player';
 import { Cards } from './cards';
 @Component({
@@ -6,16 +7,18 @@ import { Cards } from './cards';
   templateUrl: './sueca.page.html',
   styleUrls: ['./sueca.page.scss'],
 })
-export class SuecaPage {
+export class SuecaPage{
+  constructor(public gameStartLoader:LoadingController){}
   public numberOfPlayers: number;
   public players: Array<Player> = [];
   public cards: Cards;
   public turn = 0;
   public roundDuration = 0;
   public cardSelected: number;
-  public playerSelected: Player;
+  public playerSelected?: Player;
   public FirstTurn: boolean;
   public LoaderIsActive: boolean;
+  public startMenuIsActive = true;
 
   public CreatePlayers(numberOfPlayers: number): void {
     this.numberOfPlayers = numberOfPlayers;
@@ -25,7 +28,6 @@ export class SuecaPage {
       player.numberInTheOrder = index;
       this.players.push(player);
     }
-    console.log(this.players.length);
   }
 
   public StartGame(event): void {
@@ -33,13 +35,17 @@ export class SuecaPage {
     console.log(numberOfPlayersSelected);
     this.RoundStart();
     this.CreatePlayers(numberOfPlayersSelected);
-    this.ActiveLoader();
     this.RollCard();
-    this.ActiveSelectionLoading();
+    this.PresentLoading();
     this.IsFirstTurn();
     this.GenerateRounds();
+
+    this.hideStartMenu();
     this.showPlayerCard(this.SelectPlayer());
     this.showCard(this.cardSelected);
+  }
+  hideStartMenu() {
+    this.startMenuIsActive = false;
   }
 
   showCard(cardSelected: number) {
@@ -47,7 +53,7 @@ export class SuecaPage {
   }
 
   showPlayerCard(player: Player) {
-    throw new Error('Method not implemented.');
+
   }
 
   GenerateRounds() {
@@ -72,23 +78,27 @@ export class SuecaPage {
   }
 
   ActiveSelectionLoading(): void {
-    this.ActiveLoader();
+    this.PresentLoading();
   }
 
   RoundStart() {
     this.turn++;
   }
 
-  ActiveLoader(): void {
-    this.LoaderIsActive = true;
-    setTimeout (() => {
-      this.UnactiveLoader();
-   }, 1000);
-  }
+  public async PresentLoading() {
 
-  UnactiveLoader():void{
-    this.LoaderIsActive = false;
-  }
+  const loading = await this.gameStartLoader.create({
+    cssClass: 'sueca.page.scss',
+    message: 'Prepara o Estrago...',
+    duration: 2000
+  });
+  await loading.present();
+
+  const { role, data } = await loading.onDidDismiss();
+  console.log('Loading dismissed!');
+
+}
+
 
   NumberSelected(number: number) {
 

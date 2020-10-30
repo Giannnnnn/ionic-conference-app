@@ -1,12 +1,31 @@
-.playerNumber{
-align-self: center;
+
+.page-subtitle{
+font-family: 'Anton', sans-serif;
 padding-top: 1em;
+padding-left: 45%;
 }
 
-.welcome{
-padding-left: 30%;
-padding-top: 5%;
-padding-bottom: 5%;
+.page-title{
+  font-family: 'Anton', sans-serif;
+  font-size: 6em;
+  font-weight: normal;
+  padding-left: 45%;
+  padding-top: 1em;
+}
+
+.page-title:hover{
+  text-shadow: 2px 2px 5px #999;
+
+}
+.page-players-number{
+  font-weight: normal;
+  font-family: 'Anton', sans-serif;
+  padding-left: 45%;
+  padding-top: 1em;
+}
+.game-container{
+  padding-left: 30px;
+
 }
 
 .continue{
@@ -15,8 +34,32 @@ padding-bottom: 5%;
 padding-left: 8em;
 padding-top: 8em;
 }
+
 .loading{
         --background: #222;
         --spinner-color: #fff;
         color: #fff;
+}
+.page-game{
+  padding-left: 44%;
+  padding-top: 1em;
+}
+.card{
+  background-image: url("../../../../assets/cards/background_1.png");
+  width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-items: center;
+}
+
+.player-text{
+  font-family: 'Anton', sans-serif;
+  padding-left: 20%;
+  font-size: 6em;
+  font-weight: normal;
+}
+
+ion-content{
+  margin: 0;
 }

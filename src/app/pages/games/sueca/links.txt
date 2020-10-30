@@ -4,3 +4,7 @@ https://www.fabricadecodigo.com/adicionando-autenticacao-do-google-ao-seu-web-ap
 https://www.udemy.com/course/ionic-angular-firebase-facebook/learn/lecture/14409548#overview
 https://edupala.com/ionic-two-way-data-binding/
 https://ionicframework.com/docs/api/loading
+
+TODO
+// trocar o css por quem sabe http://mobileangularui.com/docs/  http://mobileangularui.com/docs/getting-started/
+
